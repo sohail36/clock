@@ -1,6 +1,8 @@
 setInterval(updateTime,1000);
 updateTime();
 function updateTime(){
+    var audio=new Audio('clock.mp3');
+    audio.src="clock.mp3";
     var min=document.querySelector('.minute_hand');
     var sec=document.querySelector('.second_hand');
     var hor=document.querySelector('.hour_hand');
@@ -11,16 +13,17 @@ function updateTime(){
     sec.style.setProperty("--angle",seconds+"deg");
     min.style.setProperty("--angle",minutes+"deg");
     hor.style.setProperty("--angle",hour+"deg");
-    
+    console.log(new_data.getHours())
     if(new_data.getHours()>12)
     document.querySelector(".digital .hour").innerText=new_data.getHours()-12;
+    else if(new_data.getHours()==0)
+    document.querySelector(".digital .hour").innerText=12;
     else
     document.querySelector(".digital .hour").innerText=new_data.getHours();
     document.querySelector(".digital .minute").innerText=new_data.getMinutes();
     document.querySelector(".digital .second").innerText=new_data.getSeconds();
     setdate(new_data.getDay());
-    var audio=new Audio('clock.mp3');
-    audio.play();
+    
 }
 function setdate(ele){
     var day=document.querySelector('.day');
