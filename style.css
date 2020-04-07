@@ -9,13 +9,13 @@
 }
 
 body{
-    height: 100vh;
-    border:1px solid black;
+    height: 100vh; 
+    width: 100vw;     
     display: flex;
     justify-content: center;
     align-items: center;
-    /* overflow: hidden; */
     background:linear-gradient(90deg,rgb(47,150,163),rgb(48,62,143));
+    overflow: hidden;
 }
 
 
@@ -209,6 +209,45 @@ body{
     font-size: 20px;
     color:black;   
 }
+
+@media screen and (max-width:414px){
+    .day{
+        position: absolute;
+        top: 39%;
+        font-weight: bold;
+        font-size: 20px;
+        color: black;
+    }
+    .digital{
+        position: absolute;
+        bottom: 35%;
+        text-align: center;
+        display: flex;
+        margin: 1.2rem;
+        transform: translate(-15%);
+    }
+}
+
+@media screen and (min-height:1024px){
+    .day{
+        position: absolute;
+        top: 42%;
+        font-weight: bold;
+        font-size: 20px;
+        color: black;
+    }
+    .digital{
+        position: absolute;
+        bottom: 40%;
+        text-align: center;
+        display: flex;
+        margin: 1.2rem;
+        transform: translate(-15%);
+    }
+}
+
+
+
 
 
 

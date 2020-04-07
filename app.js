@@ -13,7 +13,7 @@ function updateTime(){
     sec.style.setProperty("--angle",seconds+"deg");
     min.style.setProperty("--angle",minutes+"deg");
     hor.style.setProperty("--angle",hour+"deg");
-    console.log(new_data.getHours())
+    
     if(new_data.getHours()>12)
     document.querySelector(".digital .hour").innerText=new_data.getHours()-12;
     else if(new_data.getHours()==0)
